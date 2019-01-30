@@ -1,0 +1,16 @@
+server:
+  port: 9090
+spring:
+  freemarker:
+    template-loader-path:
+    - classpath:/templates
+  mvc:
+    static-path-pattern: /static/**
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/panta?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  type-aliases-package: com.wanwu.panta.dal.domain
+  mapper-locations: classpath:mappers/*/*.xml
